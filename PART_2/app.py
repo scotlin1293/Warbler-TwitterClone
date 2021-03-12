@@ -365,6 +365,7 @@ def homepage():
                     .limit(100)
                     .all())
         liked_msg_ids = [msg.id for msg in g.user.likes]
+        
         return render_template('home.html', messages=messages, likes=liked_msg_ids)
 
     else:
